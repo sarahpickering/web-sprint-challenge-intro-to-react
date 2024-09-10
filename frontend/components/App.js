@@ -45,13 +45,11 @@ fetchData();
       <h2>Star Wars Characters</h2>
       <p>See the README of the project for instructions on completing this challenge</p>
       {/* ❗ Map over the data in state, rendering a Character at each iteration */}
-      <ul>
+       <div className="character-list">
         {characters.map(character => (
-          <li key={character.id}>
-            <strong>{character.name}</strong> - Homeworld: {character.homeworld}
-          </li>
+          <Character key = {character.id} character={character} />
         ))}
-      </ul>
+        </div> 
     </div>
   );
 }
